@@ -1,0 +1,31 @@
+.searchContainer {
+ padding: 5%;
+}
+
+.searchForm {
+ width: 100%;
+ display: flex;
+}
+
+.searchContainer input{
+ background-color: rgba(0, 0, 0, 0.616);
+ height: 50px;
+ font-size: 24px;
+ width: 80%;
+ color: white;
+ border: none;
+ padding-left: 10px;
+ margin-right: 10px;
+}
+
+.searchContainer button{
+ height: 50px;
+ background-color: var(--netflix-pink);
+ border: none;
+ color: white;
+}
+
+.searchFilter {
+ height: 100px;
+ background-color: #555555;
+}

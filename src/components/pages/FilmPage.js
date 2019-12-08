@@ -1,6 +1,6 @@
 import React from 'react';
 import { FilmSearchButton } from '../film/FilmSearchButton';
-import { Logo } from '../Logo';
+import { Logo } from '../utils/Logo'
 import { FilmCover } from '../film/FilmCover';
 import { FilmTitle } from '../film/FilmTitle';
 import { FilmRating } from '../film/FilmRating';
@@ -9,7 +9,7 @@ import { FilmDescription } from '../film/FilmDescription';
 import { FilmsByGenre } from '../film/FilmsByGenre';
 
 
-export default class FilmPage extends React.Component {
+export class FilmPage extends React.Component {
   render() {
     return (
      <>

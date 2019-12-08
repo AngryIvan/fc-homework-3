@@ -1,0 +1,9 @@
+.logoText {
+	font-size: large;
+	color: var(--netflix-pink);
+	margin: auto 0;
+}
+
+.netflix {
+	font-weight: bold;
+}

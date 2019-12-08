@@ -1,0 +1,9 @@
+img {
+ width: 320px;
+}
+
+.itemCard {
+ display: inline-block;
+ width: 320px;
+ background-color: red;
+}

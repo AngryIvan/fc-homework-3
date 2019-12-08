@@ -1,7 +1,8 @@
 import React from 'react';
+// import styles from './MainPage.module.css'
 import { Search } from '../search/Search';
 import { Results } from '../results/Results';
-import { Logo } from '../Logo';
+import { Logo } from '../utils/Logo';
 
 export class MainPage extends React.Component {
   render() {

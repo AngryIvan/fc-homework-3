@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Results.module.css'
 import { ResultsBody } from './ResultsBody'
 import { ResultsCount } from './ResultsCount';
 import { ResultsSort } from './ResultsSort';
@@ -7,12 +8,11 @@ export class Results extends React.Component {
   render() {
     return (
      <>
-      <section>
+      <section className={styles.countSortPane}>
        <ResultsCount count={7}></ResultsCount>
-       <ResultsSort></ResultsSort>
+       <ResultsSort className={styles.sortBy}></ResultsSort>
       </section>
-      <ResultsBody>
-      </ResultsBody>
+      <ResultsBody className={styles.resultsBody}></ResultsBody>
      </>
     );
   }
