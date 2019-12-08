@@ -3,7 +3,7 @@ import { SearchInput } from './SearchInput';
 import { SearchButton } from './SearchButton';
 import { SearchFilter } from './SearchFilter';
 
-export class SearchBlock extends React.Component {
+export class Search extends React.Component {
   render() {
     return (
      <>

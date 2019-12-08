@@ -1,5 +1,16 @@
 import React from 'react';
+import { Button } from 'antd';
+
+const ButtonGroup = Button.Group;
 
 export const ResultsSort = (props) => {
-  return <h1>Hello, {props.name}</h1>;
+  return (
+    <>
+      <span>SORT BY </span>
+      <ButtonGroup>
+        <Button>RELEASE DATE</Button>
+        <Button>RATING</Button>
+      </ButtonGroup>
+    </>
+  );
 }

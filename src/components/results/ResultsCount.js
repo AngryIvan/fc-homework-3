@@ -1,5 +1,7 @@
 import React from 'react';
 
 export const ResultsCount = (props) => {
-  return <h1>Hello, {props.name}</h1>;
+  return (
+    <p>{props.count} movie(s) found</p>
+  );
 }

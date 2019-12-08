@@ -1,5 +1,6 @@
 import React from 'react';
+import { Input } from 'antd';
 
 export const SearchInput = () => {
-  return <input type="text" placeholder="Write your query here"></input>;
+  return <Input placeholder="Your query" />;
 }

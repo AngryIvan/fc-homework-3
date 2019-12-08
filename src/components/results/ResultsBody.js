@@ -1,5 +1,14 @@
 import React from 'react';
+import Item from '../item/Item'
 
 export const ResultsBody = (props) => {
-  return <h1>Hello, {props.name}</h1>;
+  return (
+    <>
+      <Item></Item>
+      <Item></Item>
+      <Item></Item>
+      <Item></Item>
+      <Item></Item>
+    </>
+  );
 }

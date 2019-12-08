@@ -6,7 +6,7 @@ const ButtonGroup = Button.Group;
 export const SearchFilter = (props) => {
   return (
     <>
-      <span>SEARCH BY</span>
+      <span>SEARCH BY </span>
       <ButtonGroup>
         <Button>TITLE</Button>
         <Button>GENRE</Button>

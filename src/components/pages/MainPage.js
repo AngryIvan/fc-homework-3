@@ -1,15 +1,18 @@
 import React from 'react';
-import { SearchBlock } from '../search/SearchBlock';
+import { Search } from '../search/Search';
+import { Results } from '../results/Results';
 
 export class MainPage extends React.Component {
   render() {
     return (
      <>
       <header>
-        <SearchBlock></SearchBlock>
+        <p><span>netlfix</span> roulette</p>
+        <Search></Search>
       </header>
+        <Results></Results>
       <footer>
-        I am footer
+        <p><span>netlfix</span> roulette</p>
       </footer>
      </>
     );
