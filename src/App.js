@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
+import { MainPage } from './components/pages/MainPage';
 
 function App() {
-  const clickMe = () => {
-    alert(22)
-  }
-
   return (
-    <>
-      <h1 onMouseEnter={clickMe}>Homework</h1>
+    <> 
+      <MainPage></MainPage>
     </>
   //   <Switch>
   //   <Route exact path="/" component={HomePage} />
