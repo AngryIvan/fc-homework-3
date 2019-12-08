@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 import { MainPage } from './components/pages/MainPage';
+import FilmPage from './components/pages/FilmPage';
 
 function App() {
   return (
     <> 
-      <MainPage></MainPage>
+      <FilmPage></FilmPage>
     </>
   //   <Switch>
   //   <Route exact path="/" component={HomePage} />

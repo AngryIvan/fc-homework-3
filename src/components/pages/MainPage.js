@@ -1,18 +1,19 @@
 import React from 'react';
 import { Search } from '../search/Search';
 import { Results } from '../results/Results';
+import { Logo } from '../Logo';
 
 export class MainPage extends React.Component {
   render() {
     return (
      <>
       <header>
-        <p><span>netlfix</span> roulette</p>
+        <Logo></Logo>
         <Search></Search>
       </header>
-        <Results></Results>
+      <Results></Results>
       <footer>
-        <p><span>netlfix</span> roulette</p>
+        <Logo></Logo>
       </footer>
      </>
     );
