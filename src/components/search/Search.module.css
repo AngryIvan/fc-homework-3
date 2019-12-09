@@ -5,6 +5,7 @@
 .searchForm {
  width: 100%;
  display: flex;
+ padding-bottom: 10px;
 }
 
 .searchContainer input{
@@ -27,5 +28,5 @@
 
 .searchFilter {
  height: 100px;
- background-color: #555555;
+ background-color: var(--light-gray);
 }

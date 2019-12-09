@@ -1,0 +1,13 @@
+section.navBar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; 
+}
+
+.navBar p {
+    display: inline;
+}
+
+header.filmHeader {
+    height: 520px;
+}

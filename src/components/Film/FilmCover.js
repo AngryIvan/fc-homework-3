@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './Film.module.css';
 
 export const FilmCover = (props) => {
   return (
-    <img src="https://image.tmdb.org/t/p/w500/ldoY4fTZkGISMidNw60GHoNdgP8.jpg" alt="cover"></img>
+    <img src="https://image.tmdb.org/t/p/w500/ldoY4fTZkGISMidNw60GHoNdgP8.jpg" alt="cover" className={styles.filmPoster}/>
   );
 }

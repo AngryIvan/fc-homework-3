@@ -3,6 +3,6 @@ import styles from './Search.module.css'
 
 export const SearchInput = () => {
   return (
-   <input type="text" placeholder="Your query" className={styles.searchInput}/>
+   <input type="text" placeholder="Search" className={styles.searchInput}/>
   );
 }

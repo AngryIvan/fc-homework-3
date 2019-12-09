@@ -1,0 +1,43 @@
+.searchIcon {
+    color: var(--netflix-pink);
+    font-size: 1.5em;
+}
+
+section.filmsByGenre {
+    padding: 0 50px;
+    height: 70px;
+    background-color: var(--light-gray);
+    color: white;
+    display: flex;
+    align-items: center
+}
+
+img.filmPoster {
+    width: 280px;
+    display: inline-block;
+}
+
+div.filmHeader {
+    display: Flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+p.info > span {
+    color: var(--netflix-pink);
+    font-size: 1.5em;
+}
+
+.resultsBody {
+    padding: 50px;
+    background-color: var(--dark-gray);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.infoBlock {
+    width: 60%;
+
+}

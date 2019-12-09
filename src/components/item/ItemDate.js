@@ -1,7 +1,8 @@
 import React from 'react';
+import { Tag } from 'antd';
 
 export const ItemDate = (props) => {
   return (
-    <span>2003</span>
+    <Tag color="#232323">2003</Tag>
   );
 }

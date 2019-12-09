@@ -1,9 +1,15 @@
 img {
- width: 320px;
+    width: 320px;
 }
 
 .itemCard {
- display: inline-block;
- width: 320px;
- background-color: red;
+    display: inline-block;
+    width: 320px;
+    color: white;
+}
+
+.itemDate {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }

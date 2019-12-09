@@ -1,8 +1,12 @@
 import React from 'react';
-import { Button } from 'antd';
+import styles from './Film.module.css';
+import { Icon } from 'antd';
+import { Link } from 'react-router-dom';
 
 export const FilmSearchButton = (props) => {
   return (
-    <Button type="primary" icon="search" shape="circle" size="large" />
+    <Link to="/">
+      <Icon type="search" className={styles.searchIcon}/>
+    </Link>
   );
 }

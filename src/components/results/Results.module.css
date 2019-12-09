@@ -1,7 +1,7 @@
 .countSortPane {
  color: white;
  height: 70px;
- background-color: #555555;
+ background-color: var(--light-gray);
  display: flex;
  align-items: center;
  justify-content: space-between;
@@ -12,7 +12,15 @@
  float: left;
 }
 
-.resultsBody div{
- background-color: #232323;
- display: flex;
+.resultsBody {
+    padding: 50px;
+    background-color: var(--dark-gray);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.resultsBody > * {
+    margin: 1em 0;
 }

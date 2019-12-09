@@ -2,6 +2,6 @@ import React from 'react';
 
 export const ItemTitle = (props) => {
   return (
-    <span>Kill Bill: Vol 1</span>
+    <span>Guardians Of The Galaxy: Vol 3</span>
   );
 }

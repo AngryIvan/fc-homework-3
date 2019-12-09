@@ -25,7 +25,7 @@
 
   header {
     width: 100%;
-    height: 360px;
+    height: 420px;
     padding: 50px;
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('https://footeandfriendsonfilm.com/wp-content/uploads/2018/07/best.jpeg');
@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #555555;
+    background-color: var(--light-gray);
   }
 
   h1 {

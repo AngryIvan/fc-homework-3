@@ -1,11 +1,8 @@
 import React from 'react';
+import styles from './FilmPage.module.css'
 import { FilmSearchButton } from '../film/FilmSearchButton';
 import { Logo } from '../utils/Logo'
-import { FilmCover } from '../film/FilmCover';
-import { FilmTitle } from '../film/FilmTitle';
-import { FilmRating } from '../film/FilmRating';
-import { FilmInfo } from '../film/FilmInfo';
-import { FilmDescription } from '../film/FilmDescription';
+import { FilmHeader } from '../film/FilmHeader';
 import { FilmsByGenre } from '../film/FilmsByGenre';
 
 
@@ -13,16 +10,12 @@ export class FilmPage extends React.Component {
   render() {
     return (
      <>
-      <header>
-        <section>
+      <header className={styles.filmHeader}>
+        <section className={styles.navBar}>
           <Logo></Logo>
           <FilmSearchButton></FilmSearchButton>
         </section>
-        <FilmCover></FilmCover>
-        <FilmTitle></FilmTitle>
-        <FilmRating></FilmRating>
-        <FilmInfo></FilmInfo>
-        <FilmDescription></FilmDescription>
+        <FilmHeader></FilmHeader>
       </header>
       <FilmsByGenre></FilmsByGenre>
       <footer>
