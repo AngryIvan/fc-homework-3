@@ -1,11 +1,8 @@
 import React from 'react';
-import { Badge } from 'antd';
+import styles from './Film.module.css'
 
 export const FilmRating = (props) => {
   return (
-    <Badge
-      count={4.6}
-      style={{ backgroundColor: '#fff', color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }}
-    />
+    <div className={styles.rating}>4,6</div>
   );
 }

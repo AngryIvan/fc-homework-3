@@ -4,7 +4,7 @@ import styles from './Film.module.css';
 
 export const FilmsList = (props) => {
   return (
-    <div className={styles.resultsBody}>
+    <div className={styles.filmsByGenre}>
       <Item></Item>
       <Item></Item>
       <Item></Item>

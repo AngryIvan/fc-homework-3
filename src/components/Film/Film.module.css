@@ -1,6 +1,6 @@
 .searchIcon {
     color: var(--netflix-pink);
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 section.filmsByGenre {
@@ -28,7 +28,7 @@ p.info > span {
     font-size: 1.5em;
 }
 
-.resultsBody {
+.filmsByGenre {
     padding: 50px;
     background-color: var(--dark-gray);
     display: flex;
@@ -37,7 +37,22 @@ p.info > span {
     align-items: space-between;
 }
 
+.filmsByGenre > * {
+    margin: 1em 0;
+}
+
 .infoBlock {
     width: 60%;
+}
 
+
+div.rating {
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    border:1px solid white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: var(--lime-green);
 }
