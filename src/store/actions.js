@@ -1,0 +1,32 @@
+const ACTIONS  = {
+	LOAD_MOVIES_SUCCESS: 'LOAD_MOVIES_SUCCESS',
+	GET_ALL_MOVIES: 'GET_ALL_MOVIES',
+	SWITCH_SEARCH_BY: 'SWITCH_SEARCH_BY' 
+};
+
+const API_URL = 'http://reactjs-cdp.herokuapp.com';
+
+const loadMoviesSuccessAction = arrOfMovies => ({
+	type: ACTIONS.LOAD_MOVIES_SUCCESS,
+	arrOfMovies,
+});
+
+const switchSearchByAction = searchBy => ({
+	type: ACTIONS.SWITCH_SEARCH_BY,
+	searchBy,
+})
+
+export function switchSearchBy(searchBy) {
+	console.log(ACTIONS.SWITCH_SEARCH_BY)
+	// return dispatch => Promise.resolve(searchBy)
+	// 	.then(searchBy => { dispatch(switchSearchByAction(searchBy)) })
+	// 	.catch((error) => {	console.log(error)})
+	return dispatch => dispatch(switchSearchByAction(searchBy));
+}
+
+export function fetchAllMovies() {
+	return dispatch => fetch(`${API_URL}/movies`)
+		.then(response => response.json())
+		.then((arrOfMovies) => {	dispatch(loadMoviesSuccessAction(arrOfMovies))})
+		.catch((error) => {	console.log(error)});
+}

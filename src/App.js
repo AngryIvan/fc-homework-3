@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { store } from './createStore';
+import { store } from './store/createStore';
 import './App.css';
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import MainPage from './components/pages/MainPage';
