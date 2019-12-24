@@ -2,7 +2,7 @@ import React from 'react';
 import Item from '../item/Item';
 import styles from './Film.module.css';
 
-export const FilmsList = (props) => {
+const FilmsList = (props) => {
   return (
     <div className={styles.filmsByGenre}>
       <Item></Item>
@@ -12,3 +12,5 @@ export const FilmsList = (props) => {
     </div>
   );
 }
+
+export default FilmsList;

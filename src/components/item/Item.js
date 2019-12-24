@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Item.module.css';
 import { Link } from "react-router-dom";
-import { ItemImage } from './ItemImage';
-import { ItemTitle } from './ItemTitle';
-import { ItemDate } from './ItemDate';
-import { ItemGenre } from './ItemGenre';
+import ItemImage from './ItemImage';
+import ItemTitle from './ItemTitle';
+import ItemDate from './ItemDate';
+import ItemGenre from './ItemGenre';
 
 export default class Item extends React.Component {
   render() {

@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Film.module.css'
-import { FilmCover } from './FilmCover';
-import { FilmTitle } from './FilmTitle';
-import { FilmRating } from './FilmRating';
-import { FilmInfo } from './FilmInfo';
-import { FilmDescription } from './FilmDescription';
+import FilmCover from './FilmCover';
+import FilmTitle from './FilmTitle';
+import FilmRating from './FilmRating';
+import FilmInfo from './FilmInfo';
+import FilmDescription from './FilmDescription';
 
-export const FilmHeader = (props) => {
+const FilmHeader = (props) => {
   return (
     <div className={styles.filmHeader}>
         <FilmCover></FilmCover>
@@ -19,3 +19,5 @@ export const FilmHeader = (props) => {
     </div>
   );
 }
+
+export default FilmHeader;

@@ -2,7 +2,7 @@ import React from 'react';
 import Item from '../item/Item';
 import styles from './Results.module.css';
 
-export const ResultsBody = (props) => {
+const ResultsBody = (props) => {
   return (
     <div className={styles.resultsBody}>
       <Item></Item>
@@ -18,3 +18,5 @@ export const ResultsBody = (props) => {
     </div>
   );
 }
+
+export default ResultsBody;

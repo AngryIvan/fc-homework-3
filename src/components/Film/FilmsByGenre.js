@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Film.module.css';
-import { FilmsList } from './FilmList';
+import FilmsList from './FilmList';
 
 
-export const FilmsByGenre = (props) => {
+const FilmsByGenre = (props) => {
   return (
    <>
     <section className={styles.filmsByGenre}>
@@ -13,3 +13,5 @@ export const FilmsByGenre = (props) => {
    </>
   );
 }
+
+export default FilmsByGenre;

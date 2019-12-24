@@ -1,9 +1,10 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
-export default function filmsReducer(state, action) {
+const filmsReducer = (state, action) => {
     switch (action.type) {
         case 'LOAD_MOVIES_SUCCESS':
+            console.log(action)
             return Object.assign({}, state, {
                 films: action.arrOfMovies.data
             })

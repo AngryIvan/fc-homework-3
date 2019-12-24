@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './FilmPage.module.css'
-import { FilmSearchButton } from '../film/FilmSearchButton';
-import { Logo } from '../utils/Logo'
-import { FilmHeader } from '../film/FilmHeader';
-import { FilmsByGenre } from '../film/FilmsByGenre';
+import FilmSearchButton from '../film/FilmSearchButton';
+import Logo from '../utils/Logo'
+import FilmHeader from '../film/FilmHeader';
+import FilmsByGenre from '../film/FilmsByGenre';
 
 
-export class FilmPage extends React.Component {
+export default class FilmPage extends React.Component {
   render() {
     return (
      <>

@@ -3,7 +3,7 @@ import { Button } from 'antd';
 
 const ButtonGroup = Button.Group;
 
-export const ResultsSort = (props) => {
+const ResultsSort = (props) => {
   return (
     <div>
       <span>SORT BY </span>
@@ -14,3 +14,5 @@ export const ResultsSort = (props) => {
     </div>
   );
 }
+
+export default ResultsSort;

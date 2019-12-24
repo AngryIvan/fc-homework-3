@@ -4,9 +4,9 @@ import { store } from './store/createStore';
 import './App.css';
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import MainPage from './components/pages/MainPage';
-import { FilmPage } from './components/pages/FilmPage';
+import FilmPage from './components/pages/FilmPage';
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <Router> 
@@ -20,3 +20,4 @@ function App() {
 }
 
 export default App;
+

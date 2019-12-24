@@ -3,17 +3,18 @@ import { Button } from 'antd';
 
 const ButtonGroup = Button.Group;
 
-export const SearchFilter = (props) => {
-  const switchByTitle = () => props.switch('title');
-  const switchByGenre = () => props.switch('genre');
+const SearchFilter = ({switch1}) => {
+  const switchBy = (event) => { switch1(event.target.children[0].innerText.toLowerCase())};
   
   return (
     <>
       <span>SEARCH BY </span>
       <ButtonGroup>
-        <Button onClick={switchByTitle}>TITLE</Button>
-        <Button onClick={switchByGenre}>GENRE</Button>
+        <Button onClick={switchBy}>TITLE</Button>
+        <Button onClick={switchBy}>GENRE</Button>
       </ButtonGroup>
     </>
   );
 }
+
+export default SearchFilter;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Search } from '../search/Search';
-import { Results } from '../results/Results';
-import { Logo } from '../utils/Logo';
-import { fetchAllMovies } from '../../store/actions'
+import Search from '../search/Search';
+import Results from '../results/Results';
+import Logo from '../utils/Logo';
+import { fetchAllMovies }  from '../../store/actions'
 import ErrorBoundary from '../utils/ErrorBoundary';
 
 

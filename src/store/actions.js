@@ -16,15 +16,13 @@ const switchSearchByAction = searchBy => ({
 	searchBy,
 })
 
-export function switchSearchBy(searchBy) {
-	console.log(ACTIONS.SWITCH_SEARCH_BY)
-	// return dispatch => Promise.resolve(searchBy)
-	// 	.then(searchBy => { dispatch(switchSearchByAction(searchBy)) })
-	// 	.catch((error) => {	console.log(error)})
+export const switchSearchBy = (searchBy) => {
+	console.log(ACTIONS.SWITCH_SEARCH_BY, searchBy)
+
 	return dispatch => dispatch(switchSearchByAction(searchBy));
 }
 
-export function fetchAllMovies() {
+export const fetchAllMovies = () => {
 	return dispatch => fetch(`${API_URL}/movies`)
 		.then(response => response.json())
 		.then((arrOfMovies) => {	dispatch(loadMoviesSuccessAction(arrOfMovies))})

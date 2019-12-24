@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Logo.module.css'
 import { Link } from 'react-router-dom'
 
-export const Logo = (props) => {
+const Logo = (props) => {
   return (
   
     <Link to="/" className={style.logoText}>
@@ -12,3 +12,5 @@ export const Logo = (props) => {
     </Link>
   );
 }
+
+export default Logo;
