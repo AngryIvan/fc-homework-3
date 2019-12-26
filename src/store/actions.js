@@ -11,20 +11,14 @@ const loadMoviesSuccessAction = arrOfMovies => ({
 	arrOfMovies,
 });
 
-const switchSearchByAction = searchBy => ({
+export const switchSearchByAction = searchBy => ({
 	type: ACTIONS.SWITCH_SEARCH_BY,
 	searchBy,
 })
 
-export const switchSearchBy = (searchBy) => {
-	console.log(ACTIONS.SWITCH_SEARCH_BY, searchBy)
-
-	return dispatch => dispatch(switchSearchByAction(searchBy));
-}
-
 export const fetchAllMovies = () => {
 	return dispatch => fetch(`${API_URL}/movies`)
 		.then(response => response.json())
-		.then((arrOfMovies) => {	dispatch(loadMoviesSuccessAction(arrOfMovies))})
+		.then((arrOfMovies) => dispatch(loadMoviesSuccessAction(arrOfMovies)))
 		.catch((error) => {	console.log(error)});
 }

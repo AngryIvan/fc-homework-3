@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 const filmsReducer = (state, action) => {
@@ -28,4 +28,6 @@ const initialState = {
     }
 };
 
-export const store = createStore(filmsReducer, initialState, applyMiddleware(thunk));
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+export const store = createStore(filmsReducer, initialState, composeEnhancer(applyMiddleware(thunk)),);

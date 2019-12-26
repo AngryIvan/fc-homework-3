@@ -4,7 +4,6 @@ import styles from './Search.module.css'
 import SearchInput from './SearchInput';
 import SearchButton from './SearchButton';
 import SearchFilter from './SearchFilter';
-import { switchSearchBy } from '../../store/actions'
 
 class Search extends React.Component {
   render() {
@@ -15,7 +14,7 @@ class Search extends React.Component {
        <SearchInput className={styles.searchInput} />
        <SearchButton className={styles.searchButton} />
       </section>
-      <SearchFilter switch1={switchSearchBy} />
+      <SearchFilter />
      </div>
     );
   }
@@ -25,8 +24,4 @@ const mapStateToProps = (state) => ({
   films: state,
 })
 
-const mapDispatchToProps = {
-  switchSearchBy
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(mapStateToProps, null)(Search);
