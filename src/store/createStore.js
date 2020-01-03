@@ -12,7 +12,8 @@ const filmsReducer = (state, action) => {
             console.log(action)
             return Object.assign({}, state, {
                 search: {
-                    searchBy: action.searchBy
+                    searchResults: state.search.searchResults,
+                    searchBy: action.searchBy,
                 }
             })
         default:
