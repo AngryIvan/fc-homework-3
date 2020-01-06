@@ -12,7 +12,8 @@ const filmsReducer = (state, action) => {
             console.log(action)
             return Object.assign({}, state, {
                 search: {
-                    searchBy: action.searchBy
+                    searchResults: state.search.searchResults,
+                    searchBy: action.searchBy,
                 }
             })
         default:
@@ -30,4 +31,4 @@ const initialState = {
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export const store = createStore(filmsReducer, initialState, composeEnhancer(applyMiddleware(thunk)),);
+export const store = createStore(filmsReducer, initialState, composeEnhancer(applyMiddleware(thunk)));

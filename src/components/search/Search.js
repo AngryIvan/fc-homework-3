@@ -8,14 +8,14 @@ import SearchFilter from './SearchFilter';
 class Search extends React.Component {
   render() {
     return (
-     <div className={styles.searchContainer}>
-      <h1>Find your movie</h1>
-      <section className={styles.searchForm}>
-       <SearchInput className={styles.searchInput} />
-       <SearchButton className={styles.searchButton} />
-      </section>
-      <SearchFilter />
-     </div>
+      <div className={styles.searchContainer}>
+        <h1>Find your movie</h1>
+        <section className={styles.searchForm}>
+          <SearchInput className={styles.searchInput} />
+          <SearchButton className={styles.searchButton} />
+        </section>
+        <SearchFilter />
+      </div>
     );
   }
 }
