@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button } from 'antd';
-import { switchSearchBy } from '../../store/actions';
+import { switchSearchByAction } from '../../store/actions';
 
 const ButtonGroup = Button.Group;
 
@@ -24,7 +24,7 @@ const SearchFilter = ({ switchSearchBy }) => {
 }
 
 const mapDispatchToProps = {
-  switchSearchBy,
+  switchSearchBy: switchSearchByAction,
 }
 
 export default connect(null, mapDispatchToProps)(SearchFilter);
