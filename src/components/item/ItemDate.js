@@ -1,9 +1,9 @@
 import React from 'react';
 import { Tag } from 'antd';
 
-const ItemDate = (props) => {
+const ItemDate = ({releaseDate}) => {
   return (
-    <Tag color="#232323">2003</Tag>
+    <Tag color="#232323">{releaseDate}</Tag>
   );
 }
 

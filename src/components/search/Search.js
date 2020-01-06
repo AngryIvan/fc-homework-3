@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button } from 'antd';
+import { performSearch } from '../../store/actions';
 import styles from './Search.module.css'
 import SearchFilter from './SearchFilter';
-import { performSearch } from '../../store/actions';
 
 class Search extends React.Component {
   constructor(props){

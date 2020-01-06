@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ItemGenre = (props) => {
-  return <span>Action and adventure</span>;
+const ItemGenre = ({genres}) => {
+  return <span>{genres[0]}</span>;
 }
 
 export default ItemGenre;

@@ -3,17 +3,25 @@ import styles from './Results.module.css'
 import ResultsBody from './ResultsBody'
 import ResultsCount from './ResultsCount';
 import ResultsSort from './ResultsSort';
+import { connect } from 'react-redux';
 
-export default class Results extends React.Component {
+class Results extends React.Component {
   render() {
+    console.log(this.props.films)
     return (
      <>
       <section className={styles.countSortPane}>
-       <ResultsCount count={7}></ResultsCount>
+       <ResultsCount count={this.props.films.length}></ResultsCount>
        <ResultsSort className={styles.sortBy}></ResultsSort>
       </section>
-      <ResultsBody className={styles.resultsBody}></ResultsBody>
+      <ResultsBody results={this.props.films} className={styles.resultsBody}></ResultsBody>
      </>
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  films: state.films,
+})
+
+export default connect(mapStateToProps)(Results);

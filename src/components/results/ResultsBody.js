@@ -1,22 +1,15 @@
 import React from 'react';
 import Item from '../item/Item';
 import styles from './Results.module.css';
+import uuid from 'uuid';
 
-const ResultsBody = (props) => {
+const ResultsBody = ({results}) => {
   return (
     <div className={styles.resultsBody}>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
+      {results.map((film) => <Item film={film} key={uuid.v4()} />)}
     </div>
   );
 }
+
 
 export default ResultsBody;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ItemTitle = (props) => {
+const ItemTitle = ({title}) => {
   return (
-    <span>Guardians Of The Galaxy: Vol 3</span>
+    <span>{title}</span>
   );
 }
 
