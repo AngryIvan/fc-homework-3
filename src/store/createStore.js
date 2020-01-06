@@ -4,18 +4,15 @@ import thunk from 'redux-thunk';
 const filmsReducer = (state, action) => {
     switch (action.type) {
         case 'LOAD_MOVIES_SUCCESS':
-            console.log(action)
+            console.log(action);
             return Object.assign({}, state, {
                 films: action.arrOfMovies.data
-            })
+            });
         case 'SWITCH_SEARCH_BY':
-            console.log(action)
+            console.log(action);
             return Object.assign({}, state, {
-                search: {
-                    searchResults: state.search.searchResults,
-                    searchBy: action.searchBy,
-                }
-            })
+                searchBy: action.searchBy,
+            });
         default:
             return state;
     }
@@ -23,10 +20,7 @@ const filmsReducer = (state, action) => {
 
 const initialState = {
     films: [],
-    search: {
-        searchBy: 'title',
-        searchResults: []
-    }
+    searchBy: 'title',
 };
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

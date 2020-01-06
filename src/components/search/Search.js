@@ -1,18 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Button } from 'antd';
 import styles from './Search.module.css'
-import SearchInput from './SearchInput';
-import SearchButton from './SearchButton';
 import SearchFilter from './SearchFilter';
+import { performSearch } from '../../store/actions';
 
 class Search extends React.Component {
+  constructor(props){
+    super(props);
+    this.textInput = React.createRef();
+  }
+  handleClick = () => {
+    console.log(this.textInput.current.value)
+    this.props.performSearch(this.props.searchType, this.textInput.current.value)
+  }
+
   render() {
     return (
       <div className={styles.searchContainer}>
         <h1>Find your movie</h1>
         <section className={styles.searchForm}>
-          <SearchInput className={styles.searchInput} />
-          <SearchButton className={styles.searchButton} />
+          <input type="text" placeholder="Search" className={styles.searchInput} ref={this.textInput}/>
+          <Button type="primary" size="large" onClick={this.handleClick}>SEARCH</Button>
         </section>
         <SearchFilter />
       </div>
@@ -22,6 +31,11 @@ class Search extends React.Component {
 
 const mapStateToProps = (state) => ({
   films: state,
+  searchType: state.searchBy
 })
 
-export default connect(mapStateToProps, null)(Search);
+const mapDispatchToProps = {
+  performSearch,
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
