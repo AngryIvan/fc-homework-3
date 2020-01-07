@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Button } from 'antd';
 import { performSearch } from '../../store/actions';
+import { withRouter } from "react-router-dom"; 
 import styles from './Search.module.css'
 import SearchFilter from './SearchFilter';
 
@@ -10,9 +11,16 @@ class Search extends React.Component {
     super(props);
     this.textInput = React.createRef();
   }
+
+  async componentDidMount() {
+    const query = this.props.match.params.query
+    if (query)
+    await this.props.performSearch(this.props.searchType, query);
+  }
+
   handleClick = () => {
-    console.log(this.textInput.current.value)
-    this.props.performSearch(this.props.searchType, this.textInput.current.value)
+    this.props.history.push(`/search/${this.textInput.current.value}`)
+    this.props.performSearch(this.props.searchType, this.props.match.params.query);
   }
 
   render() {
@@ -38,4 +46,4 @@ const mapDispatchToProps = {
   performSearch,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search));

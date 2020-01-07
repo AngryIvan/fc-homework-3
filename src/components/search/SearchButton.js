@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button } from 'antd';
 
-const SearchButton = () => {
+const SearchButton = ({history}) => {
+  
   return (
-    <Button type="primary" size="large">SEARCH</Button>
+    <Button type="primary" size="large" onClick={() => console.log(history)}>SEARCH</Button>
   );
 }
 

@@ -8,11 +8,7 @@ import ErrorBoundary from '../utils/ErrorBoundary';
 
 
 class MainPage extends React.Component {
-  componentDidMount() {
-    this.props.fetchAllMovies();
-  }
-
-  render() {
+render() {
     return (
      <>
       <ErrorBoundary>      

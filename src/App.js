@@ -12,6 +12,7 @@ const App = () => {
       <Router> 
         <Switch>
           <Route exact path="/film" component={(props) => <FilmPage {...props}/>} />
+          <Route path="/search/:query" component={(props) => <MainPage {...props}/>} />
           <Route exact path="/" component={(props) => <MainPage {...props}/>} />
         </Switch>
       </Router>
