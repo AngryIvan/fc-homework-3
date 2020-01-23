@@ -4,6 +4,7 @@ import ResultsBody from './ResultsBody'
 import ResultsCount from './ResultsCount';
 import ResultsSort from './ResultsSort';
 import { connect } from 'react-redux';
+import EmptyBody from './EmptyBody';
 
 class Results extends React.Component {
   render() {
@@ -14,7 +15,9 @@ class Results extends React.Component {
        <ResultsCount count={this.props.films.length}></ResultsCount>
        <ResultsSort className={styles.sortBy}></ResultsSort>
       </section>
-      <ResultsBody results={this.props.films} className={styles.resultsBody}></ResultsBody>
+      {this.props.films.length 
+        ? <ResultsBody results={this.props.films} className={styles.resultsBody} />
+        : <EmptyBody />}
      </>
     );
   }

@@ -21,6 +21,12 @@
     align-items: space-between;
 }
 
+.emptyResultsBody {
+    padding: 50px;
+    background-color: var(--dark-gray);
+    height: calc(100% - 490px);
+}
+
 .resultsBody > * {
     margin: 1em 0;
 }

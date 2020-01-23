@@ -12,15 +12,15 @@ class Search extends React.Component {
     this.textInput = React.createRef();
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     const query = this.props.match.params.query
     if (query)
-    await this.props.performSearch(this.props.searchType, query);
+    this.props.performSearch(this.props.searchType, query);
   }
 
-  handleClick = () => {
-    this.props.history.push(`/search/${this.textInput.current.value}`)
-    this.props.performSearch(this.props.searchType, this.props.match.params.query);
+  handleClick = async () => {
+    this.props.history.push(`/search/${this.textInput.current.value}`);
+    await this.props.performSearch(this.props.searchType, this.props.match.params.query);
   }
 
   render() {

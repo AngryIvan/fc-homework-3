@@ -13,13 +13,13 @@ render() {
      <>
       <ErrorBoundary>      
         <header>
-          <Logo></Logo>
-          <Search></Search>
+          <Logo />
+          <Search />
         </header>
       </ErrorBoundary>
-      <Results></Results>
+      <Results />
       <footer>
-        <Logo></Logo>
+        <Logo />
       </footer>
      </>
     );
