@@ -3,13 +3,14 @@ import styles from './Film.module.css';
 import FilmsList from './FilmList';
 
 
-const FilmsByGenre = (props) => {
+const FilmsByGenre = ({genre, films}) => {
+  console.log(films)
   return (
    <>
     <section className={styles.filmsByGenre}>
-     <span>Films by Action genre</span>
+     <span>Films by {genre && genre[0]} genre</span>
     </section>
-    <FilmsList></FilmsList>
+    <FilmsList films={films && films}/>
    </>
   );
 }

@@ -56,3 +56,15 @@ div.rating {
     justify-content: center;
     color: var(--lime-green);
 }
+
+.resultsBody {
+    padding: 50px;
+    background-color: var(--dark-gray);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+}
+.resultsBody > * {
+    margin: 1em 0;
+}

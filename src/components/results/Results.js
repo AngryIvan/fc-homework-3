@@ -8,7 +8,6 @@ import EmptyBody from './EmptyBody';
 
 class Results extends React.Component {
   render() {
-    console.log(this.props.films)
     return (
      <>
       <section className={styles.countSortPane}>

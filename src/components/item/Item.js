@@ -8,7 +8,6 @@ import ItemGenre from './ItemGenre';
 export default class Item extends React.Component {
   render() {
     if (this.props.film) {
-      console.log(this.props.film)
       const {poster_path, genres, release_date, title} = this.props.film;
       return (
           <div className={styles.itemCard}>

@@ -39,7 +39,7 @@ export const switchSearchby = (searchBy) => (dispatch) => {
 	return dispatch(switchSearchByAction(searchBy));
 }
 
-export const performSearch = (searchType, query) => {
+export const performSearch = (query, searchType) => {
 	console.log('perform search')
 	return dispatch => fetch(`${API_URL}/movies?search=${query}&searchBy=${searchType}`)
 		.then(response => response.json())
