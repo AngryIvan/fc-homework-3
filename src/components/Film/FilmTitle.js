@@ -1,8 +1,8 @@
 import React from 'react';
 
-const FilmTitle = (props) => {
+const FilmTitle = ({title}) => {
   return (
-    <h1 style={{display: "inline"}}>Kill Bill: Vol 1</h1>
+    <h1 style={{display: "inline"}}>{title} </h1>
   );
 }
 

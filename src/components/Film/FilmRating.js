@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Film.module.css'
 
-const FilmRating = (props) => {
+const FilmRating = ({rating}) => {
   return (
-    <div className={styles.rating}>4,6</div>
+    <div className={styles.rating}>{rating}</div>
   );
 }
 

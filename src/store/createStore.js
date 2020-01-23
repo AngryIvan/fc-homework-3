@@ -11,6 +11,11 @@ const filmsReducer = (state, action) => {
             return Object.assign({}, state, {
                 searchBy: action.searchBy,
             });
+        case 'LOAD_FILM_SUCCESS':
+            console.log('load film success')
+            return Object.assign({}, state, {
+                currentFilm: action.film,
+            });
         default:
             return state;
     }
@@ -18,6 +23,7 @@ const filmsReducer = (state, action) => {
 
 const initialState = {
     films: [],
+    currentFilm: {},
     searchBy: 'title',
 };
 

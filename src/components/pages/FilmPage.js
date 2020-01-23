@@ -4,9 +4,16 @@ import FilmSearchButton from '../film/FilmSearchButton';
 import Logo from '../utils/Logo'
 import FilmHeader from '../film/FilmHeader';
 import FilmsByGenre from '../film/FilmsByGenre';
+import { getFilmData } from '../../store/actions';
+import { withRouter } from "react-router-dom";
+import { connect } from 'react-redux';
 
 
-export default class FilmPage extends React.Component {
+class FilmPage extends React.Component {
+  componentDidMount() {
+    this.props.getFilmData(this.props.match.params.id);
+  }
+
   render() {
     return (
      <>
@@ -15,7 +22,7 @@ export default class FilmPage extends React.Component {
           <Logo></Logo>
           <FilmSearchButton></FilmSearchButton>
         </section>
-        <FilmHeader></FilmHeader>
+        <FilmHeader film={this.props.film}></FilmHeader>
       </header>
       <FilmsByGenre></FilmsByGenre>
       <footer>
@@ -25,3 +32,13 @@ export default class FilmPage extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  film: state.currentFilm
+})
+
+const mapDispatchToProps = {
+  getFilmData,
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FilmPage));
