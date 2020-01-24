@@ -1,35 +1,44 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { Button } from 'antd';
-import { performSearch } from '../../store/actions';
-import { withRouter } from "react-router-dom"; 
-import styles from './Search.module.css'
-import SearchFilter from './SearchFilter';
+import React from "react";
+import { connect } from "react-redux";
+import { Button } from "antd";
+import { performSearch } from "../../store/actions";
+import { withRouter } from "react-router-dom";
+import styles from "./Search.module.css";
+import SearchFilter from "./SearchFilter";
 
 class Search extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.textInput = React.createRef();
   }
 
   componentDidMount() {
-    const query = this.props.match.params.query
-    if (query)
-    this.props.performSearch(query, this.props.searchType);
+    const query = this.props.match.params.query;
+    if (query) this.props.performSearch(query, this.props.searchType);
   }
 
   handleClick = async () => {
     this.props.history.push(`/search/${this.textInput.current.value}`);
-    await this.props.performSearch(this.props.match.params.query, this.props.searchType);
-  }
+    await this.props.performSearch(
+      this.props.match.params.query,
+      this.props.searchType
+    );
+  };
 
   render() {
     return (
       <div className={styles.searchContainer}>
         <h1>Find your movie</h1>
         <section className={styles.searchForm}>
-          <input type="text" placeholder="Search" className={styles.searchInput} ref={this.textInput}/>
-          <Button type="primary" size="large" onClick={this.handleClick}>SEARCH</Button>
+          <input
+            type="text"
+            placeholder="Search"
+            className={styles.searchInput}
+            ref={this.textInput}
+          />
+          <Button type="primary" size="large" onClick={this.handleClick}>
+            SEARCH
+          </Button>
         </section>
         <SearchFilter />
       </div>
@@ -37,13 +46,13 @@ class Search extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   films: state,
   searchType: state.searchBy
-})
+});
 
 const mapDispatchToProps = {
-  performSearch,
-}
+  performSearch
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search));

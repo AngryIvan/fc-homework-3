@@ -4,7 +4,6 @@ import FilmsList from './FilmList';
 
 
 const FilmsByGenre = ({genre, films}) => {
-  console.log(films)
   return (
    <>
     <section className={styles.filmsByGenre}>

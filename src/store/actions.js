@@ -3,6 +3,7 @@ const ACTIONS  = {
 	LOAD_FILM_SUCCESS: 'LOAD_FILM_SUCCESS',
 	GET_ALL_MOVIES: 'GET_ALL_MOVIES',
 	SWITCH_SEARCH_BY: 'SWITCH_SEARCH_BY',
+	SWITCH_SORT_BY: 'SWITCH_SORT_BY',
 	PERFORM_SEARCH: 'PERFORM_SEARCH'
 };
 
@@ -23,6 +24,11 @@ export const switchSearchByAction = searchBy => ({
 	searchBy,
 });
 
+export const switchSortByAction = sortBy => ({
+	type: ACTIONS.SWITCH_SORT_BY,
+	sortBy,
+});
+
 export const performSearchAction = (searchType, query) => ({
 	type: ACTIONS.PERFORM_SEARCH,
 	searchType, 
@@ -39,6 +45,11 @@ export const switchSearchby = (searchBy) => (dispatch) => {
 	return dispatch(switchSearchByAction(searchBy));
 }
 
+export const switchSortBy = (sortBy) => (dispatch) => {
+	console.log(ACTIONS.SWITCH_SORT_BY);
+	return dispatch(switchSortByAction(sortBy));
+}
+
 export const performSearch = (query, searchType) => {
 	console.log('perform search')
 	return dispatch => fetch(`${API_URL}/movies?search=${query}&searchBy=${searchType}`)
@@ -52,12 +63,5 @@ export const getFilmData = (film) => {
 	return dispatch => fetch(`${API_URL}/movies/${film}`)
 		.then(response => response.json())
 		.then((arrOfMovies) => dispatch(loadFilmSuccessAction(arrOfMovies)))
-		.catch((error) => {	console.log(error)});
-};
-
-export const fetchAllMovies = () => {
-	return dispatch => fetch(`${API_URL}/movies`)
-		.then(response => response.json())
-		.then((arrOfMovies) => dispatch(loadMoviesSuccessAction(arrOfMovies)))
 		.catch((error) => {	console.log(error)});
 };

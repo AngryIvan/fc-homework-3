@@ -7,7 +7,6 @@ import FilmInfo from './FilmInfo';
 import FilmDescription from './FilmDescription';
 
 const FilmHeader = ({film}) => {
-  console.log(film)
   if (film) {
     const {poster_path, title, vote_average, release_date, overview, runtime} = film;
     return (

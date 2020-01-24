@@ -16,7 +16,6 @@ class FilmPage extends React.Component {
   }
 
   render() {
-    console.log(this.props.filmsByGenre)
     if (this.props.film) {
       return (
         <>
