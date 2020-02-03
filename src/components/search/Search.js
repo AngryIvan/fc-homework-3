@@ -28,7 +28,7 @@ class Search extends React.Component {
   render() {
     return (
       <div className={styles.searchContainer}>
-        <h1>Find your movie</h1>
+        <h1 e2e="search-label">Find your movie</h1>
         <section className={styles.searchForm}>
           <input
             type="text"
