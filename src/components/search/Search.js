@@ -20,7 +20,7 @@ class Search extends React.Component {
   handleClick = async () => {
     this.props.history.push(`/search/${this.textInput.current.value}`);
     await this.props.performSearch(
-      this.props.match.params.query,
+      this.textInput.current.value,
       this.props.searchType
     );
   };

@@ -51,7 +51,6 @@ export const switchSortBy = (sortBy) => (dispatch) => {
 }
 
 export const performSearch = (query, searchType) => {
-	console.log('perform search')
 	return dispatch => fetch(`${API_URL}/movies?search=${query}&searchBy=${searchType}`)
 		.then(response => response.json())
 		.then((arrOfMovies) => dispatch(loadMoviesSuccessAction(arrOfMovies)))
@@ -59,7 +58,6 @@ export const performSearch = (query, searchType) => {
 };
 
 export const getFilmData = (film) => {
-	console.log('get film data')
 	return dispatch => fetch(`${API_URL}/movies/${film}`)
 		.then(response => response.json())
 		.then((arrOfMovies) => dispatch(loadFilmSuccessAction(arrOfMovies)))
